@@ -1,9 +1,21 @@
 .container {
   background-color: var(--color-surface-dark);
-  padding: 1.125rem var(--card-padding);
+  padding: 0.875rem var(--card-padding);
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+@media (min-width: 540px) {
+  .container {
+    padding: 1rem var(--card-padding);
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    padding: 1.125rem var(--card-padding);
+  }
 }
 
 .heading {
