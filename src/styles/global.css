@@ -1,4 +1,5 @@
 @import './tokens.css';
+@import './responsive.css';
 
 *,
 *::before,
@@ -28,7 +29,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--spacing-md);
+  padding: 1rem;
+}
+
+@media (min-width: 540px) {
+  #root {
+    padding: 1.5rem;
+  }
 }
 
 button {

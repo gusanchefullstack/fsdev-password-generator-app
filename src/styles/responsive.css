@@ -1,0 +1,39 @@
+/* ===========================
+   Mobile-first: base (≤375px)
+   =========================== */
+:root {
+  --card-padding: 1rem;
+  --font-size-password: 1.5rem;
+  --font-size-heading: 1.25rem;
+  --font-size-label: 0.875rem;
+  --font-size-strength: 0.875rem;
+  --font-size-title: 0.875rem;
+}
+
+/* ===========================
+   Tablet (≥540px)
+   =========================== */
+@media (min-width: 540px) {
+  :root {
+    --card-padding: 1.5rem;
+    --font-size-password: 1.75rem;
+    --font-size-heading: 1.375rem;
+    --font-size-label: 1rem;
+    --font-size-strength: 1rem;
+    --font-size-title: 0.9375rem;
+  }
+}
+
+/* ===========================
+   Desktop (≥1024px)
+   =========================== */
+@media (min-width: 1024px) {
+  :root {
+    --card-padding: 2rem;
+    --font-size-password: 2rem;
+    --font-size-heading: 1.5rem;
+    --font-size-label: 1.125rem;
+    --font-size-strength: 1.125rem;
+    --font-size-title: 1rem;
+  }
+}

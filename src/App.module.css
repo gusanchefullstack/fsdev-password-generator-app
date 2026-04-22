@@ -3,7 +3,13 @@
   max-width: var(--card-width);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 1rem;
+}
+
+@media (min-width: 540px) {
+  .main {
+    gap: 1.5rem;
+  }
 }
 
 .title {
@@ -17,7 +23,13 @@
 .card {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 1rem;
+}
+
+@media (min-width: 540px) {
+  .card {
+    gap: 1.5rem;
+  }
 }
 
 .controls {
@@ -25,7 +37,19 @@
   padding: var(--card-padding);
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-md);
+  gap: 1rem;
+}
+
+@media (min-width: 540px) {
+  .controls {
+    gap: 1.25rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .controls {
+    gap: 1.5rem;
+  }
 }
 
 .checkboxGroup {
@@ -33,17 +57,11 @@
   padding: 0;
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-sm);
+  gap: 0.875rem;
 }
 
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  white-space: nowrap;
-  border: 0;
+@media (min-width: 540px) {
+  .checkboxGroup {
+    gap: 1rem;
+  }
 }
