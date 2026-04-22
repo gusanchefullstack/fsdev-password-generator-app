@@ -21,7 +21,8 @@
   --color-accent-hover: #18171f;
 
   --color-text-primary: #e6e5ea;
-  --color-text-muted: #817d92;
+  --color-text-muted: #908c9c;
+  --color-text-placeholder: #908c9c;
   --color-text-dark: #18171f;
 
   --color-strength-too-weak: #f64a4a;

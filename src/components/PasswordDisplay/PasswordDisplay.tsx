@@ -9,13 +9,14 @@ interface PasswordDisplayProps {
 export function PasswordDisplay({ password, copied, onCopy }: PasswordDisplayProps) {
   return (
     <div className={styles.container}>
-      <p
+      <output
+        htmlFor="char-length uppercase lowercase numbers symbols"
         className={`${styles.password} ${!password ? styles.placeholder : ''}`}
-        aria-label="Generated password"
         aria-live="polite"
+        aria-label="Generated password"
       >
         {password || 'P4$5W0rD!'}
-      </p>
+      </output>
       <button
         className={styles.copyBtn}
         onClick={onCopy}
