@@ -20,9 +20,11 @@
 
 .heading {
   font-size: var(--font-size-small);
+  font-weight: var(--font-weight-bold);
   color: var(--color-text-muted);
   letter-spacing: 0.15em;
   text-transform: uppercase;
+  margin: 0;
 }
 
 .result {

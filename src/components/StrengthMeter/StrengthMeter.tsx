@@ -20,7 +20,7 @@ export function StrengthMeter({ strength }: StrengthMeterProps) {
 
   return (
     <div className={styles.container} role="status" aria-label={`Password strength: ${config?.label ?? 'not generated'}`}>
-      <span className={styles.heading}>STRENGTH</span>
+      <h2 className={styles.heading}>STRENGTH</h2>
       <div className={styles.result}>
         {config && (
           <span className={styles.label}>{config.label}</span>

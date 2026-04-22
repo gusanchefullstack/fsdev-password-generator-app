@@ -16,7 +16,6 @@ export function OptionCheckbox({ id, label, checked, onChange }: OptionCheckboxP
         checked={checked}
         onChange={onChange}
         className={styles.input}
-        aria-checked={checked}
       />
       <label htmlFor={id} className={styles.label}>
         {label}
