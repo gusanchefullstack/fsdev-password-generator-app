@@ -13,10 +13,13 @@ export function CharacterLengthSlider({
   min = 1,
   max = 20,
 }: CharacterLengthSliderProps) {
-  const percentage = ((length - min) / (max - min)) * 100;
+  const percentage = max === min ? 0 : ((length - min) / (max - min)) * 100;
 
   return (
-    <div className={styles.container}>
+    <div
+      className={styles.container}
+      style={{ '--fill-percent': `${percentage}%` } as React.CSSProperties}
+    >
       <div className={styles.header}>
         <label htmlFor="char-length" className={styles.label}>
           Character Length
@@ -33,7 +36,6 @@ export function CharacterLengthSlider({
         value={length}
         onChange={(e) => onChange(Number(e.target.value))}
         className={styles.slider}
-        style={{ '--fill-percent': `${percentage}%` } as React.CSSProperties}
         aria-valuemin={min}
         aria-valuemax={max}
         aria-valuenow={length}

@@ -8,6 +8,7 @@ interface GenerateButtonProps {
 export function GenerateButton({ onClick, disabled }: GenerateButtonProps) {
   return (
     <button
+      type="button"
       className={styles.btn}
       onClick={onClick}
       disabled={disabled}

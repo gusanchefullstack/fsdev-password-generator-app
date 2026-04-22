@@ -39,13 +39,15 @@ function generatePassword(length: number, options: PasswordOptions): string {
 
   if (charset === '') return '';
 
-  const remaining = length - guaranteedChars.length;
+  // Clamp guaranteed chars to requested length so the output never exceeds it
+  const safeGuaranteed = guaranteedChars.slice(0, length);
+  const remaining = length - safeGuaranteed.length;
   const randomChars: string[] = [];
   for (let i = 0; i < remaining; i++) {
     randomChars.push(charset[Math.floor(Math.random() * charset.length)]);
   }
 
-  const allChars = [...guaranteedChars, ...randomChars];
+  const allChars = [...safeGuaranteed, ...randomChars];
   for (let i = allChars.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [allChars[i], allChars[j]] = [allChars[j], allChars[i]];
@@ -75,9 +77,13 @@ export function usePasswordGenerator() {
 
   const copyToClipboard = useCallback(async () => {
     if (!password) return;
-    await navigator.clipboard.writeText(password);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
+    try {
+      await navigator.clipboard.writeText(password);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // Clipboard API unavailable or permission denied — silently ignore
+    }
   }, [password]);
 
   const toggleOption = useCallback((key: keyof PasswordOptions) => {

@@ -18,6 +18,7 @@ export function PasswordDisplay({ password, copied, onCopy }: PasswordDisplayPro
         {password || 'P4$5W0rD!'}
       </output>
       <button
+        type="button"
         className={styles.copyBtn}
         onClick={onCopy}
         aria-label={copied ? 'Password copied to clipboard' : 'Copy password to clipboard'}
