@@ -14,6 +14,7 @@ export function PasswordDisplay({ password, copied, onCopy }: PasswordDisplayPro
         className={`${styles.password} ${!password ? styles.placeholder : ''}`}
         aria-live="polite"
         aria-label="Generated password"
+        tabIndex={0}
       >
         {password || 'P4$5W0rD!'}
       </output>

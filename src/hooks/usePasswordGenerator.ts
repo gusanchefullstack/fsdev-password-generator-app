@@ -82,7 +82,20 @@ export function usePasswordGenerator() {
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      // Clipboard API unavailable or permission denied — silently ignore
+      const textarea = document.createElement('textarea');
+      textarea.value = password;
+      textarea.style.position = 'fixed';
+      textarea.style.opacity = '0';
+      document.body.appendChild(textarea);
+      textarea.focus();
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        setCopied(true);
+        setTimeout(() => setCopied(false), 2000);
+      } finally {
+        document.body.removeChild(textarea);
+      }
     }
   }, [password]);
 

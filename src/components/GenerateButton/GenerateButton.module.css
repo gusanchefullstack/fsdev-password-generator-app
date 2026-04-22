@@ -33,20 +33,21 @@
   }
 }
 
-.btn:hover:not(:disabled),
-.btn:focus-visible:not(:disabled) {
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn:hover,
+.btn:focus-visible {
   background-color: transparent;
   color: var(--color-accent);
 }
 
-.btn:hover:not(:disabled) img,
-.btn:focus-visible:not(:disabled) img {
+.btn:hover img,
+.btn:focus-visible img {
   filter: brightness(0) saturate(100%) invert(79%) sepia(45%) saturate(387%) hue-rotate(93deg) brightness(108%) contrast(101%);
-}
-
-.btn:disabled {
-  opacity: 0.5;
-  cursor: not-allowed;
 }
 
 @media (prefers-reduced-motion: no-preference) {

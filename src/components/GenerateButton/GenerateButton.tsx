@@ -1,16 +1,14 @@
 import styles from './GenerateButton.module.css';
 
 interface GenerateButtonProps {
-  onClick: () => void;
   disabled?: boolean;
 }
 
-export function GenerateButton({ onClick, disabled }: GenerateButtonProps) {
+export function GenerateButton({ disabled }: GenerateButtonProps) {
   return (
     <button
-      type="button"
+      type="submit"
       className={styles.btn}
-      onClick={onClick}
       disabled={disabled}
       aria-label="Generate password"
     >

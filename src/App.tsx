@@ -39,7 +39,11 @@ function App() {
           onCopy={copyToClipboard}
         />
 
-        <section className={styles.controls} aria-label="Password options">
+        <form
+          className={styles.controls}
+          aria-label="Password options"
+          onSubmit={(e) => { e.preventDefault(); generate(); }}
+        >
           <CharacterLengthSlider
             length={length}
             onChange={setLength}
@@ -60,8 +64,8 @@ function App() {
 
           <StrengthMeter strength={strength} />
 
-          <GenerateButton onClick={generate} disabled={!hasOptions} />
-        </section>
+          <GenerateButton disabled={!hasOptions} />
+        </form>
       </div>
     </main>
   );
