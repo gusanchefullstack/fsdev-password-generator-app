@@ -1,0 +1,61 @@
+.container {
+  background-color: var(--color-surface-dark);
+  padding: 1.125rem var(--card-padding);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.heading {
+  font-size: var(--font-size-small);
+  color: var(--color-text-muted);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+}
+
+.result {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.label {
+  font-size: var(--font-size-strength);
+  color: var(--color-text-primary);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.bars {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.bar {
+  width: 0.625rem;
+  height: 1.75rem;
+  border: 2px solid var(--color-text-primary);
+  background-color: transparent;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+.tooWeak {
+  background-color: var(--color-strength-too-weak);
+  border-color: var(--color-strength-too-weak);
+}
+
+.weak {
+  background-color: var(--color-strength-weak);
+  border-color: var(--color-strength-weak);
+}
+
+.medium {
+  background-color: var(--color-strength-medium);
+  border-color: var(--color-strength-medium);
+}
+
+.strong {
+  background-color: var(--color-strength-strong);
+  border-color: var(--color-strength-strong);
+}

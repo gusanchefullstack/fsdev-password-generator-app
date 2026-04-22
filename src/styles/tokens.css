@@ -1,0 +1,55 @@
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/assets/fonts/JetBrainsMono-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('/assets/fonts/JetBrainsMono-Italic-VariableFont_wght.ttf') format('truetype');
+  font-weight: 100 800;
+  font-style: italic;
+}
+
+:root {
+  /* Colors */
+  --color-bg: #18171f;
+  --color-surface: #24232c;
+  --color-surface-dark: #18171f;
+  --color-accent: #a4ffaf;
+  --color-accent-hover: #18171f;
+
+  --color-text-primary: #e6e5ea;
+  --color-text-muted: #817d92;
+  --color-text-dark: #18171f;
+
+  --color-strength-too-weak: #f64a4a;
+  --color-strength-weak: #fb7c58;
+  --color-strength-medium: #f8cd65;
+  --color-strength-strong: #a4ffaf;
+
+  --color-border: #817d92;
+
+  /* Typography */
+  --font-family: 'JetBrains Mono', monospace;
+  --font-weight-bold: 700;
+
+  --font-size-heading: 1.5rem;      /* 24px */
+  --font-size-password: 2rem;       /* 32px */
+  --font-size-label: 1.125rem;      /* 18px */
+  --font-size-strength: 1.125rem;   /* 18px */
+  --font-size-small: 0.875rem;      /* 14px */
+  --font-size-title: 1rem;          /* 16px */
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;    /* 8px */
+  --spacing-sm: 1rem;      /* 16px */
+  --spacing-md: 1.5rem;    /* 24px */
+  --spacing-lg: 2rem;      /* 32px */
+  --spacing-xl: 4rem;      /* 64px */
+
+  /* Layout */
+  --card-width: 33.75rem;  /* 540px */
+  --card-padding: 2rem;    /* 32px */
+}
