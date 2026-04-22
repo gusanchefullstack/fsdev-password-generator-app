@@ -4,13 +4,14 @@ interface PasswordDisplayProps {
   password: string;
   copied: boolean;
   onCopy: () => void;
+  sliderInputId: string;
 }
 
-export function PasswordDisplay({ password, copied, onCopy }: PasswordDisplayProps) {
+export function PasswordDisplay({ password, copied, onCopy, sliderInputId }: PasswordDisplayProps) {
   return (
     <div className={styles.container}>
       <output
-        htmlFor="char-length uppercase lowercase numbers symbols"
+        htmlFor={`${sliderInputId} uppercase lowercase numbers symbols`}
         className={`${styles.password} ${!password ? styles.placeholder : ''}`}
         aria-live="polite"
         aria-label="Generated password"

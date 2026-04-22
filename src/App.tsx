@@ -1,3 +1,4 @@
+import { useId } from 'react';
 import { usePasswordGenerator } from './hooks/usePasswordGenerator';
 import { PasswordDisplay } from './components/PasswordDisplay/PasswordDisplay';
 import { CharacterLengthSlider } from './components/CharacterLengthSlider/CharacterLengthSlider';
@@ -26,6 +27,8 @@ function App() {
     copyToClipboard,
   } = usePasswordGenerator();
 
+  const sliderId = useId();
+  const sliderInputId = `char-length-${sliderId.replace(/:/g, '')}`;
   const hasOptions = Object.values(options).some(Boolean);
 
   return (
@@ -37,6 +40,7 @@ function App() {
           password={password}
           copied={copied}
           onCopy={copyToClipboard}
+          sliderInputId={sliderInputId}
         />
 
         <form
@@ -47,6 +51,7 @@ function App() {
           <CharacterLengthSlider
             length={length}
             onChange={setLength}
+            inputId={sliderInputId}
           />
 
           <fieldset className={styles.checkboxGroup}>

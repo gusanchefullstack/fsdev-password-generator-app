@@ -5,6 +5,7 @@ import styles from './CharacterLengthSlider.module.css';
 interface CharacterLengthSliderProps {
   length: number;
   onChange: (value: number) => void;
+  inputId: string;
   min?: number;
   max?: number;
 }
@@ -12,12 +13,12 @@ interface CharacterLengthSliderProps {
 export function CharacterLengthSlider({
   length,
   onChange,
+  inputId,
   min = 1,
   max = 20,
 }: CharacterLengthSliderProps) {
   const uid = useId();
   const scopeClass = `slider-${uid.replace(/:/g, '')}`;
-  const inputId = `char-length-${uid.replace(/:/g, '')}`;
   const percentage = max === min ? 0 : ((length - min) / (max - min)) * 100;
 
   return (
