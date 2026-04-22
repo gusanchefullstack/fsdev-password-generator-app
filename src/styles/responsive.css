@@ -11,9 +11,9 @@
 }
 
 /* ===========================
-   Tablet (≥540px)
+   Tablet (≥33.75em / 540px)
    =========================== */
-@media (min-width: 540px) {
+@media (min-width: 33.75em) {
   :root {
     --card-padding: 1.5rem;
     --font-size-password: 1.75rem;
@@ -25,9 +25,9 @@
 }
 
 /* ===========================
-   Desktop (≥1024px)
+   Desktop (≥64em / 1024px)
    =========================== */
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   :root {
     --card-padding: 2rem;
     --font-size-password: 2rem;

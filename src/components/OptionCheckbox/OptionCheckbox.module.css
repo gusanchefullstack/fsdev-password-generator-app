@@ -15,7 +15,12 @@
   cursor: pointer;
   flex-shrink: 0;
   position: relative;
-  transition: background-color 0.15s, border-color 0.15s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .input {
+    transition: background-color 0.15s, border-color 0.15s;
+  }
 }
 
 .input:checked {

@@ -13,16 +13,21 @@
   justify-content: center;
   gap: 1rem;
   cursor: pointer;
-  transition: background-color 0.2s, color 0.2s;
 }
 
-@media (min-width: 540px) {
+@media (prefers-reduced-motion: no-preference) {
+  .btn {
+    transition: background-color 0.2s, color 0.2s;
+  }
+}
+
+@media (min-width: 33.75em) {
   .btn {
     padding: 1rem;
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .btn {
     padding: 1.125rem;
   }
@@ -44,6 +49,8 @@
   cursor: not-allowed;
 }
 
-.btn img {
-  transition: filter 0.2s;
+@media (prefers-reduced-motion: no-preference) {
+  .btn img {
+    transition: filter 0.2s;
+  }
 }

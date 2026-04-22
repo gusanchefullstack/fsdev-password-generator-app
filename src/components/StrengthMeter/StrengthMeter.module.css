@@ -6,13 +6,13 @@
   justify-content: space-between;
 }
 
-@media (min-width: 540px) {
+@media (min-width: 33.75em) {
   .container {
     padding: 1rem var(--card-padding);
   }
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 64em) {
   .container {
     padding: 1.125rem var(--card-padding);
   }
@@ -51,7 +51,12 @@
   height: 1.75rem;
   border: 2px solid var(--color-text-primary);
   background-color: transparent;
-  transition: background-color 0.2s, border-color 0.2s;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .bar {
+    transition: background-color 0.2s, border-color 0.2s;
+  }
 }
 
 .tooWeak {
